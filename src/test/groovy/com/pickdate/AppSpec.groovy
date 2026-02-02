@@ -3,12 +3,12 @@ package com.pickdate
 import com.pickdate.test.type.SpringBootSpec
 import spock.lang.Requires
 
-@Requires({ it.env['include-slow'] == 'true' })
+@Requires({ it.env['INCLUDE_SLOW_TESTS'] == 'true' })
 class AppSpec extends SpringBootSpec {
 
     def contextLoads() {
         expect:
-        appLoaded()
+        assert appLoaded()
     }
 
     def appLoaded() {

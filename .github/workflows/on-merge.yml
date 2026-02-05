@@ -108,7 +108,7 @@ jobs:
     permissions:
       contents: read
     env:
-      IMAGE_NAME: ghcr.io/rk-d3v/pickdate-api
+      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/pickdate-api
       IMAGE_TAG: ${{ needs.prepare-env.outputs.version }}
 
     steps:

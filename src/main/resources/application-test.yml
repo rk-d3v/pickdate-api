@@ -1,4 +1,0 @@
-spring:
-  modulith:
-    runtime:
-      verification-enabled: false

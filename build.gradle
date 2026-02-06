@@ -34,6 +34,8 @@ ext {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -52,11 +54,14 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
 
+    // oauth2
+    implementation 'org.springframework.boot:spring-boot-starter-security-oauth2-authorization-server'
+
     // swagger support
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}")
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
 
     // hypersistence
-    implementation("io.hypersistence:hypersistence-utils-hibernate-73:${hypersistenceVersion}")
+    implementation "io.hypersistence:hypersistence-utils-hibernate-73:${hypersistenceVersion}"
 
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -84,17 +89,17 @@ dependencies {
 
     // okHttp
     implementation(platform("com.squareup.okhttp3:okhttp-bom:${okHttpVersion}"))
-    implementation("com.squareup.okhttp3:okhttp")
-    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation "com.squareup.okhttp3:okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor"
 
     // okHttp mock server
-    testImplementation("com.squareup.okhttp3:mockwebserver")
+    testImplementation "com.squareup.okhttp3:mockwebserver"
 
     // groovy
     testImplementation "org.apache.groovy:groovy-all:${groovyVersion}"
 
     // apache commons
-    implementation("org.apache.commons:commons-lang3:${apacheCommonsVersion}")
+    implementation "org.apache.commons:commons-lang3:${apacheCommonsVersion}"
 
     // spock
     testImplementation "org.spockframework:spock-core:${spockVersion}"
@@ -108,7 +113,8 @@ hibernate {
     enhancement {
         enableDirtyTracking = true
         enableAssociationManagement = true
-        enableExtendedEnhancement = true
+        enableLazyInitialization = false
+        enableExtendedEnhancement = false
     }
 }
 
@@ -125,7 +131,7 @@ tasks.named('test') {
 bootRun {
     def debug = System.getenv('REMOTE_DEBUG_ENABLED')
     if (debug == "true") {
-        jvmArgs("-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005")
+        jvmArgs "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
     }
 }
 

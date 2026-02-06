@@ -1,0 +1,18 @@
+### CREATE USER
+@username = test
+@password = test
+@email = test@test.test
+POST http://localhost:8080/api/v1/iam/users
+Content-Type: application/json
+Authorization: Basic YWRtaW46U25vd2ZpZWxkLUNlbnN1cy1DaGFyYnJvaWw4LUFueW9uZS1UdW1ibGluZw==
+
+{
+    "username": "{{username}}",
+    "password": "{{password}}",
+    "email": "{{email}}"
+}
+
+### GET ME
+GET http://localhost:8080/pickdate/api/v1/iam/users/me
+Content-Type: application/json
+#Authorization: Basic YWRtaW46U25vd2ZpZWxkLUNlbnN1cy1DaGFyYnJvaWw4LUFueW9uZS1UdW1ibGluZw==

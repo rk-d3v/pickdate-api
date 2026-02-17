@@ -1,6 +1,6 @@
 package com.pickdate.test.config
 
-import com.pickdate.shared.encryption.Encryptor
+import com.pickdate.bootstrap.encryption.Encryptor
 import groovy.transform.CompileStatic
 import org.springframework.boot.test.context.TestConfiguration
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection

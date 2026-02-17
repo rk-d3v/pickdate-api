@@ -6,14 +6,10 @@ spring:
     compose:
       lifecycle-management: start_and_stop
 
-  modulith:
-    runtime:
-      verification-enabled: true
-
   jpa:
     generate-ddl: false
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
     properties:
       hibernate:
         jdbc:
@@ -37,10 +33,6 @@ logback:
   log:
     dir: /app/logs
 
-server:
-  servlet:
-    context-path: ${PICKDATE_CONTEXT_PATH:/pickdate}
-
 springdoc:
   show-actuator: false
 
@@ -56,3 +48,11 @@ management:
     web:
       exposure:
         include: info,health,metrics,loggers
+
+server:
+  forward-headers-strategy: framework
+
+pickdate:
+  keys:
+    master-key: ${PICKDATE_MASTER_KEY:none}
+    remember-me-key: ${PICKDATE_REMEMBER_ME_KEY:none}

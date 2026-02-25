@@ -12,15 +12,6 @@ class SetupApiIntegrationSpec extends Specification {
     @Subject
     def setupApi = new SetupApi(applicationSetupUseCase)
 
-    def "should setup encryption"() {
-        when:
-        def responseEntity = setupApi.generateAesKey()
-
-        then:
-        def response = responseEntity.body
-        response.info() == "pickdate:encryptor:v1"
-    }
-
     def "should setup domain"() {
         given:
         def request = new SetupDomainRequest("http://localhost:8080")

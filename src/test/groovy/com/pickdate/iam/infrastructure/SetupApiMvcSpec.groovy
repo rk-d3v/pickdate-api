@@ -1,7 +1,6 @@
 package com.pickdate.iam.infrastructure
 
 import com.pickdate.bootstrap.exception.InternalServerError
-import com.pickdate.iam.domain.AESKeySettings
 import com.pickdate.iam.domain.ApplicationSetupUseCase
 import com.pickdate.test.mapper.JsonMapper
 import com.pickdate.test.type.MvcSpec
@@ -23,27 +22,6 @@ class SetupApiMvcSpec extends MvcSpec implements JsonMapper {
 
     @SpringBean
     ApplicationSetupUseCase applicationSetupUseCase = Mock()
-
-    def "should initialize encryption for the application"() {
-        given:
-        def settings = new AESKeySettings("test:key:v1", "test salt", "master key")
-
-        when:
-        def response = mvc.perform(post("/api/v1/iam/setup/encryption"))
-                .andDo(print())
-                .andReturn()
-                .getResponse()
-
-        then:
-        1 * applicationSetupUseCase.setupEncryption() >> settings
-
-        and:
-        response.status == 201
-
-        and:
-        def body = toObject(response.contentAsString, AESKeyResponse)
-        body.info() == "test:key:v1"
-    }
 
     def "should set domain for the application"() {
         given:

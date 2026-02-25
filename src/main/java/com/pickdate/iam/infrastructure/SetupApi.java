@@ -1,6 +1,5 @@
 package com.pickdate.iam.infrastructure;
 
-import com.pickdate.iam.domain.AESKeySettings;
 import com.pickdate.iam.domain.ApplicationSetupUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -20,13 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 class SetupApi {
 
     private final ApplicationSetupUseCase applicationSetupUseCase;
-
-    @PostMapping("/encryption")
-    @Operation(summary = "Initialize encryption for the application")
-    ResponseEntity<AESKeyResponse> generateAesKey() {
-        AESKeySettings aesKeySettings = applicationSetupUseCase.setupEncryption();
-        return new ResponseEntity<>(new AESKeyResponse(aesKeySettings.info()), HttpStatus.CREATED);
-    }
 
     @PostMapping("/domain")
     @Operation(summary = "Set public domain/origin for the application")

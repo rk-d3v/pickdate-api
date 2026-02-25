@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import static jakarta.persistence.CascadeType.ALL;
 import static jakarta.persistence.EnumType.STRING;
-import static jakarta.persistence.FetchType.EAGER;
 
 
 @Data
@@ -21,10 +19,6 @@ public class ApplicationSetup {
     private String id = APP_CONFIG;
 
     private DomainUrl domainUrl;
-
-    @OneToOne(cascade = ALL, fetch = EAGER)
-    @JoinColumn(name = "key", referencedColumnName = "id")
-    private Key key;
 
     @Enumerated(STRING)
     @Column(nullable = false)

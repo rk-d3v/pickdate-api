@@ -10,12 +10,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class KeyProperties {
 
-    private String masterKey;
     private String rememberMeKey;
-
-    public boolean isMasterKeySet() {
-        return masterKey != null
-                && !masterKey.isBlank()
-                && !masterKey.equals("none");
-    }
 }

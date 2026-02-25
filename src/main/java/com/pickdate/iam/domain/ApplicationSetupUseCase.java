@@ -5,8 +5,6 @@ public interface ApplicationSetupUseCase {
 
     void setupDomain(DomainUrl domainUrl);
 
-    AESKeySettings setupEncryption();
-
     boolean setupCompleted();
 
     void completeSetup();

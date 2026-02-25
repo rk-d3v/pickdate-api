@@ -58,5 +58,4 @@ server:
 
 pickdate:
   keys:
-    master-key: ${PICKDATE_MASTER_KEY:none}
     remember-me-key: ${PICKDATE_REMEMBER_ME_KEY:none}

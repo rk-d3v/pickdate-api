@@ -1,0 +1,38 @@
+package com.pickdate.ops.problem.infrastructure;
+
+import com.pickdate.bootstrap.domain.Identifier;
+import com.pickdate.ops.problem.application.ProblemLogFilter;
+import com.pickdate.ops.problem.domain.ProblemLog;
+import com.pickdate.ops.problem.domain.ProblemLogRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.stereotype.Repository;
+
+import static com.pickdate.ops.problem.infrastructure.ProblemLogSpecifications.*;
+
+
+@Repository
+interface ProblemLogRepositoryJpa extends ProblemLogRepository,
+        JpaRepository<ProblemLog, Identifier>,
+        JpaSpecificationExecutor<ProblemLog> {
+
+    @Override
+    default Page<ProblemLog> findAll(ProblemLogFilter filter, Pageable pageable) {
+        if (filter == null || filter.isEmpty()) {
+            return findAll(pageable);
+        }
+
+        Specification<ProblemLog> specification = Specification
+                .where(titleEquals(filter.getTitle()))
+                .and(statusEquals(filter.getStatus()))
+                .and(detailsEquals(filter.getDetail()))
+                .and(instanceEquals(filter.getInstance()))
+                .and(createdAtFrom(filter.getFrom()))
+                .and(createdAtTo(filter.getTo()));
+
+        return findAll(specification, pageable);
+    }
+}

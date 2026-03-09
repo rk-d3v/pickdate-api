@@ -97,13 +97,5 @@ public final class ProblemFactory {
                 .instance(uri.toString())
                 .build();
     }
-
-    public static Problem failedDependency(URI uri) {
-        return ProblemDetails.builder()
-                .title("Failed Dependency")
-                .status(INTERNAL_SERVER_ERROR.value())
-                .instance(uri.toString())
-                .build();
-    }
 }
 

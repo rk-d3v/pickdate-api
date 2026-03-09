@@ -10,3 +10,9 @@ spring:
     properties:
       hibernate:
         show_sql: true
+
+  quartz:
+    auto-startup: false
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration

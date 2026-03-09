@@ -2,14 +2,14 @@ package com.pickdate.poll.domain;
 
 import com.pickdate.bootstrap.validation.Assert;
 
-public record LocationData(
+public record LocationDetails(
         double latitude,
         double longitude,
         String placeId,
         String address
 ) {
 
-    public LocationData {
+    public LocationDetails {
         placeId = normalize(placeId);
         address = normalize(address);
         validate(latitude, longitude);

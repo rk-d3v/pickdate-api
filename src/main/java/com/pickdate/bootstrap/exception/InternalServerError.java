@@ -11,5 +11,6 @@ public class InternalServerError extends RuntimeException {
     public InternalServerError(String detail) {
         detail = detail == null ? "" : detail;
         this.detail = detail;
+        super(detail);
     }
 }

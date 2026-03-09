@@ -16,7 +16,7 @@ class ProblemLogListener {
     private final ProblemLogUseCase problemLogUseCase;
 
     @ApplicationModuleListener
-    public void handleProblemEvent(ProblemCapturedEvent problemEvent) {
+    public void onProblemEvent(ProblemCapturedEvent problemEvent) {
         log.info("Handling problem event: {}", problemEvent);
         var entity = ProblemLogEventMapper.toEntity(problemEvent);
         problemLogUseCase.save(entity);

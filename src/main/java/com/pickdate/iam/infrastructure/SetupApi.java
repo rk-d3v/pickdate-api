@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/iam/setup")
 @AllArgsConstructor
-@Tag(name = "Setup", description = "Bootstrap endpoints for initial application configuration (encryption, public domain/origin, and initial admin user). Available only until setup is completed.")
+@Tag(name = "Setup", description = "Bootstrap endpoints for initial application configuration. Available only until setup is completed.")
 class SetupApi {
 
     private final ApplicationSetupUseCase applicationSetupUseCase;
@@ -27,7 +27,7 @@ class SetupApi {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @PostMapping("/user")
+    @PostMapping("/admin")
     @Operation(summary = "Create initial admin user")
     ResponseEntity<Void> initializeAdminUser(@RequestBody CreateUserRequest request) {
         applicationSetupUseCase.setupAdmin(request.toUser());

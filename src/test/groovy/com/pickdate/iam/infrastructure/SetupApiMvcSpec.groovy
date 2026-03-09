@@ -46,7 +46,7 @@ class SetupApiMvcSpec extends MvcSpec implements JsonMapper {
         def request = new CreateUserRequest("email@email.com", "Password1")
 
         when:
-        def response = mvc.perform(post("/api/v1/iam/setup/user")
+        def response = mvc.perform(post("/api/v1/iam/setup/admin")
                 .content(toJson(request)).contentType(APPLICATION_JSON))
                 .andDo(print())
                 .andReturn()
@@ -78,7 +78,7 @@ class SetupApiMvcSpec extends MvcSpec implements JsonMapper {
         def request = new CreateUserRequest("incorrect@", "superSecretPass!")
 
         when:
-        def response = mvc.perform(post("/api/v1/iam/setup/user")
+        def response = mvc.perform(post("/api/v1/iam/setup/admin")
                 .content(toJson(request)).contentType(APPLICATION_JSON))
                 .andDo(print())
                 .andReturn()
@@ -92,7 +92,7 @@ class SetupApiMvcSpec extends MvcSpec implements JsonMapper {
         body.title == "Validation Error"
         body.status == 400
         body.detail == "Invalid email format"
-        body.instance.contains("/api/v1/iam/setup/user")
+        body.instance.contains("/api/v1/iam/setup/admin")
         !body.traceId.isBlank()
 
         and:

@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedModel;
@@ -21,6 +22,7 @@ import static com.pickdate.ops.audit.infrastructure.AuditLogMapper.toResponse;
 import static org.springframework.format.annotation.DateTimeFormat.ISO.DATE_TIME;
 
 
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/ops/audit")
 @AllArgsConstructor
@@ -39,9 +41,11 @@ class AuditApi {
             @RequestParam(required = false) @DateTimeFormat(iso = DATE_TIME) Instant to
     ) {
         var auditFilter = new AuditLogFilter(action, userId, from, to);
+        log.debug("retrieving audits with filter: {}", auditFilter);
         var page = auditEventUseCase.findAll(auditFilter, pageable)
                 .map(AuditLogMapper::toResponse);
 
+        log.debug("retrieved {} audits", page.getTotalElements());
         return new PagedModel<>(page);
     }
 
@@ -53,7 +57,9 @@ class AuditApi {
             @Parameter(name = "id", description = "Audit identifier", example = "a1b2c3d4-1111-2222-3333-444455556666")
             String id
     ) {
+        log.debug("retrieving audit with id: {}", id);
         var entity = auditEventUseCase.findById(id);
+
         return ResponseEntity.ok(toResponse(entity));
     }
 

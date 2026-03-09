@@ -58,4 +58,9 @@ public class Authority {
     public int hashCode() {
         return Objects.hashCode(authority);
     }
+
+    @Override
+    public String toString() {
+        return authority;
+    }
 }

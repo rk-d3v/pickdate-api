@@ -16,6 +16,7 @@ public class IllegalValueException extends RuntimeException {
         detail = detail == null ? "" : detail;
         this.properties = properties;
         this.detail = detail;
+        super(detail);
     }
 
     public IllegalValueException(Property<?> property, String detail) {

@@ -1,9 +1,11 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <option name="ACTIVE_PROFILES" value="local,swagger" />
+    <option name="DEBUG_MODE" value="true" />
     <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
     <module name="pickdate-api.main" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.pickdate.App" />
+    <option name="VM_PARAMETERS" value="-Djava.net.preferIPv4Stack=true" />
     <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
       <option name="credential" />
       <option name="region" />

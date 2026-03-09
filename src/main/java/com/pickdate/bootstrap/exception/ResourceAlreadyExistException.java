@@ -14,5 +14,6 @@ public class ResourceAlreadyExistException extends RuntimeException {
         detail = detail == null ? "" : detail;
         this.property = property;
         this.detail = detail;
+        super(detail);
     }
 }

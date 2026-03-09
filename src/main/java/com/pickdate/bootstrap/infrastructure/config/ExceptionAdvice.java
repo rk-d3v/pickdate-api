@@ -32,7 +32,7 @@ class ExceptionAdvice {
     @ApiResponse(responseCode = "404", description = "Not found")
     @ExceptionHandler(EntityNotFoundException.class)
     ResponseEntity<Problem> handleNotFound(RuntimeException ex, HttpServletRequest request) {
-        log.info("Resource not found: {}", ex.getMessage());
+        log.info("Resource not found", ex);
         URI uri = getUri(request);
         Problem problem = notFound(ex, uri);
         applicationEvents.publishEvent(new ProblemCapturedEvent(problem, ex.getMessage()));
@@ -42,7 +42,7 @@ class ExceptionAdvice {
     @ApiResponse(responseCode = "404", description = "Not found")
     @ExceptionHandler(NotFoundException.class)
     ResponseEntity<Problem> handleNotFound(NotFoundException ex, HttpServletRequest request) {
-        log.info("Resource not found: {}", ex.getMessage());
+        log.info("Resource not found", ex);
         URI uri = getUri(request);
         Problem problem = notFound(ex, uri);
         applicationEvents.publishEvent(new ProblemCapturedEvent(problem, ex.getMessage()));
@@ -52,7 +52,7 @@ class ExceptionAdvice {
     @ApiResponse(responseCode = "400", description = "Validation exception")
     @ExceptionHandler(IllegalValueException.class)
     ResponseEntity<Problem> handleBadRequest(IllegalValueException ex, HttpServletRequest request) {
-        log.warn("Validation exception: {}", ex.toString());
+        log.warn("Validation exception", ex);
         URI uri = getUri(request);
         Problem problem = badRequest(ex, uri);
         applicationEvents.publishEvent(new ProblemCapturedEvent(problem, ex.getMessage()));
@@ -62,7 +62,7 @@ class ExceptionAdvice {
     @ApiResponse(responseCode = "400", description = "Validation exception")
     @ExceptionHandler({MethodArgumentNotValidException.class, MissingRequestHeaderException.class, IllegalArgumentException.class})
     ResponseEntity<Problem> handleBadRequest(Exception ex, HttpServletRequest request) {
-        log.warn("Validation exception, {}", ex.getMessage());
+        log.warn("Validation exception", ex);
         URI uri = getUri(request);
         Problem problem = badRequest(ex, uri);
         applicationEvents.publishEvent(new ProblemCapturedEvent(problem, ex.getMessage()));
@@ -72,7 +72,7 @@ class ExceptionAdvice {
     @ApiResponse(responseCode = "409", description = "Resource already exists")
     @ExceptionHandler(ResourceAlreadyExistException.class)
     ResponseEntity<Problem> handleConflict(ResourceAlreadyExistException ex, HttpServletRequest request) {
-        log.warn("Resource already exists, {}", ex.getMessage());
+        log.warn("Resource already exists", ex);
         URI uri = getUri(request);
         Problem problem = conflict(ex, uri);
         applicationEvents.publishEvent(new ProblemCapturedEvent(problem, ex.getMessage()));
@@ -82,7 +82,7 @@ class ExceptionAdvice {
     @ApiResponse(responseCode = "500", description = "Server exception")
     @ExceptionHandler({InternalServerError.class})
     ResponseEntity<Problem> handleInternalServerException(InternalServerError ex, HttpServletRequest request) {
-        log.error("Internal server error: {}", ex.getMessage(), ex);
+        log.error("Internal server error", ex);
         URI uri = getUri(request);
         Problem problem = internalServerError(ex, uri);
         applicationEvents.publishEvent(new ProblemCapturedEvent(problem, ex.getMessage()));
@@ -92,7 +92,7 @@ class ExceptionAdvice {
     @ApiResponse(responseCode = "500", description = "Server exception")
     @ExceptionHandler(Exception.class)
     ResponseEntity<Problem> handleInternalServerException(Exception ex, HttpServletRequest request) {
-        log.error("Internal server error: {}", ex.getMessage(), ex);
+        log.error("Internal server error", ex);
         URI uri = getUri(request);
         Problem problem = internalServerError(uri);
         applicationEvents.publishEvent(new ProblemCapturedEvent(problem, ex.getMessage()));

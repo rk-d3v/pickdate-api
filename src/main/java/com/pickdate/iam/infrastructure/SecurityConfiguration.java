@@ -108,6 +108,7 @@ class SecurityConfiguration {
                         .requestMatchers("/").permitAll()
                         .requestMatchers("/static/**").permitAll()
                         .requestMatchers("/login").permitAll()
+                        .requestMatchers("/debug/**").permitAll()
                         .requestMatchers(
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",

@@ -1,6 +1,6 @@
 package com.pickdate.ops.audit.infrastructure
 
-import com.pickdate.bootstrap.web.RequestDetails
+import com.pickdate.shared.web.RequestDetails
 import com.pickdate.test.fixture.AuthenticationFixture
 import spock.lang.Specification
 

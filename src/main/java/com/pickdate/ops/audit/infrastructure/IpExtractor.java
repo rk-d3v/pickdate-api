@@ -1,6 +1,6 @@
 package com.pickdate.ops.audit.infrastructure;
 
-import com.pickdate.bootstrap.web.RequestDetails;
+import com.pickdate.shared.web.RequestDetails;
 import org.springframework.security.core.Authentication;
 
 

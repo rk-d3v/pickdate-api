@@ -1,8 +1,8 @@
 package com.pickdate.ops.problem.application
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.ops.problem.domain.ProblemLog
 import com.pickdate.ops.problem.domain.ProblemLogRepository
+import com.pickdate.shared.domain.Identifier
 import com.pickdate.test.stub.ProblemLogRepositoryFake
 
 class ProblemUseCaseTestConfig {

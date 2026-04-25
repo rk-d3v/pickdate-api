@@ -1,10 +1,10 @@
 package com.pickdate.poll.infrastructure
 
-import com.pickdate.bootstrap.domain.Property
-import com.pickdate.bootstrap.exception.IllegalValueException
-import com.pickdate.bootstrap.exception.InternalServerError
-import com.pickdate.bootstrap.exception.NotFoundException
 import com.pickdate.poll.application.PollUseCase
+import com.pickdate.shared.domain.Property
+import com.pickdate.shared.exception.IllegalValueException
+import com.pickdate.shared.exception.InternalServerError
+import com.pickdate.shared.exception.NotFoundException
 import com.pickdate.test.extension.JsonMapper
 import com.pickdate.test.type.MvcSpec
 import org.spockframework.spring.SpringBean
@@ -22,7 +22,6 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print
-
 
 @Use(JsonMapper)
 @Execution(SAME_THREAD)

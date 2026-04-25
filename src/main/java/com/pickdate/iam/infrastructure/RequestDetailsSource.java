@@ -1,6 +1,6 @@
 package com.pickdate.iam.infrastructure;
 
-import com.pickdate.bootstrap.web.RequestDetails;
+import com.pickdate.shared.web.RequestDetails;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationDetailsSource;

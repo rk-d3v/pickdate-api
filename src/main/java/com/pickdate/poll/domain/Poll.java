@@ -1,6 +1,6 @@
 package com.pickdate.poll.domain;
 
-import com.pickdate.bootstrap.domain.Identifier;
+import com.pickdate.shared.domain.Identifier;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

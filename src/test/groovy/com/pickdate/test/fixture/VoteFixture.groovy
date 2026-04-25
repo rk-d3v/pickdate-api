@@ -1,7 +1,7 @@
 package com.pickdate.test.fixture
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.poll.application.VoteData
+import com.pickdate.shared.domain.Identifier
 
 class VoteFixture {
     public static final String PARTICIPANT_ID = 'a1b2c3d4-0000-1111-2222-333344445555'

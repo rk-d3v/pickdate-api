@@ -1,6 +1,6 @@
 package com.pickdate.bootstrap.infrastructure.converter;
 
-import com.pickdate.bootstrap.domain.Email;
+import com.pickdate.shared.domain.Email;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 import lombok.RequiredArgsConstructor;

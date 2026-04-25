@@ -1,8 +1,8 @@
 package com.pickdate.test.stub
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.poll.domain.Vote
 import com.pickdate.poll.domain.VoteRepository
+import com.pickdate.shared.domain.Identifier
 
 import java.util.concurrent.ConcurrentHashMap
 

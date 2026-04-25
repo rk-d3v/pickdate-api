@@ -2,7 +2,7 @@ package com.pickdate.iam.domain;
 
 import java.util.List;
 
-import static com.pickdate.bootstrap.domain.Value.valueOrNull;
+import static com.pickdate.shared.domain.Value.valueOrNull;
 
 
 public record UserData(

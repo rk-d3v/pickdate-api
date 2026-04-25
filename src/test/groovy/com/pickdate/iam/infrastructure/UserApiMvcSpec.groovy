@@ -1,10 +1,10 @@
 package com.pickdate.iam.infrastructure
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.iam.application.UserUseCase
 import com.pickdate.iam.domain.User
 import com.pickdate.iam.domain.UserData
 import com.pickdate.iam.domain.UserNotFoundException
+import com.pickdate.shared.domain.Identifier
 import com.pickdate.test.mapper.JsonMapper
 import com.pickdate.test.type.MvcSpec
 import org.spockframework.spring.SpringBean

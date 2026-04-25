@@ -3,7 +3,7 @@ package com.pickdate.poll.application;
 
 import com.pickdate.poll.domain.Vote;
 
-import static com.pickdate.bootstrap.domain.Value.valueOrNull;
+import static com.pickdate.shared.domain.Value.valueOrNull;
 
 public record VoteData(
         String pollId,

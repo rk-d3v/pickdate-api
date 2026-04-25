@@ -1,7 +1,7 @@
 package com.pickdate.iam.domain;
 
-import com.pickdate.bootstrap.domain.Property;
-import com.pickdate.bootstrap.exception.NotFoundException;
+import com.pickdate.shared.domain.Property;
+import com.pickdate.shared.exception.NotFoundException;
 
 public class UserNotFoundException extends NotFoundException {
 

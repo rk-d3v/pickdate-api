@@ -1,7 +1,7 @@
 package com.pickdate.poll.application;
 
-import com.pickdate.bootstrap.domain.Identifier;
 import com.pickdate.poll.domain.*;
+import com.pickdate.shared.domain.Identifier;
 
 
 public interface PollUseCase {

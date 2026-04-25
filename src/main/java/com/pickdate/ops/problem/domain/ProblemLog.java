@@ -1,7 +1,7 @@
 package com.pickdate.ops.problem.domain;
 
-import com.pickdate.bootstrap.domain.Identifier;
-import com.pickdate.bootstrap.exception.InvalidParam;
+import com.pickdate.shared.domain.Identifier;
+import com.pickdate.shared.exception.InvalidParam;
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

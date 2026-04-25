@@ -1,11 +1,10 @@
 package com.pickdate.test.fixture
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.ops.audit.domain.Action
 import com.pickdate.ops.audit.domain.AuditLogEventEntity
+import com.pickdate.shared.domain.Identifier
 
 import java.time.Instant
-
 
 class AuditFixture {
 

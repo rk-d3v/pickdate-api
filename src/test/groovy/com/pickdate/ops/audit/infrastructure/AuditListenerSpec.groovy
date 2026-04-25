@@ -1,13 +1,12 @@
 package com.pickdate.ops.audit.infrastructure
 
-import com.pickdate.bootstrap.web.RequestDetails
 import com.pickdate.ops.audit.application.AuditEventUseCase
 import com.pickdate.ops.audit.domain.AuditEvent
 import com.pickdate.ops.audit.domain.LoginFailedEvent
 import com.pickdate.ops.audit.domain.LoginSuccessEvent
+import com.pickdate.shared.web.RequestDetails
 import com.pickdate.test.fixture.AuthenticationFixture
 import spock.lang.Specification
-
 
 class AuditListenerSpec extends Specification {
 

@@ -1,8 +1,8 @@
 package com.pickdate.test.stub
 
-import com.pickdate.bootstrap.domain.DisplayName
-import com.pickdate.bootstrap.domain.Email
 import com.pickdate.poll.domain.*
+import com.pickdate.shared.domain.DisplayName
+import com.pickdate.shared.domain.Email
 import org.springframework.beans.factory.annotation.Autowired
 
 import java.time.Instant

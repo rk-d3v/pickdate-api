@@ -1,7 +1,7 @@
 package com.pickdate.poll.infrastructure
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.poll.application.PollUseCaseTestConfig
+import com.pickdate.shared.domain.Identifier
 import spock.lang.Execution
 import spock.lang.Specification
 import spock.lang.Subject
@@ -11,7 +11,6 @@ import java.time.Instant
 import static com.pickdate.poll.application.PollUseCaseTestConfig.pollId
 import static com.pickdate.poll.application.PollUseCaseTestConfig.setupTestData
 import static org.spockframework.runtime.model.parallel.ExecutionMode.SAME_THREAD
-
 
 @Execution(SAME_THREAD)
 class PollApiIntegrationSpec extends Specification implements PollApiTrait {

@@ -1,8 +1,8 @@
 package com.pickdate.iam.infrastructure
 
-import com.pickdate.bootstrap.domain.Email
 import com.pickdate.iam.domain.UserNotFoundException
 import com.pickdate.iam.domain.UserRepository
+import com.pickdate.shared.domain.Email
 import com.pickdate.test.fixture.UserFixture
 import org.springframework.security.core.userdetails.UserDetails
 import spock.lang.Specification

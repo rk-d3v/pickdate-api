@@ -1,8 +1,8 @@
 package com.pickdate.poll.domain;
 
-import com.pickdate.bootstrap.domain.DisplayName;
-import com.pickdate.bootstrap.domain.Email;
-import com.pickdate.bootstrap.domain.Identifier;
+import com.pickdate.shared.domain.DisplayName;
+import com.pickdate.shared.domain.Email;
+import com.pickdate.shared.domain.Identifier;
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;

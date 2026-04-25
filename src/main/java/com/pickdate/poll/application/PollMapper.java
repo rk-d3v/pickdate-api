@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 
-import static com.pickdate.bootstrap.domain.Value.valueOrNull;
+import static com.pickdate.shared.domain.Value.valueOrNull;
 import static java.util.Comparator.comparing;
 
 

@@ -1,11 +1,11 @@
 package com.pickdate.ops.problem.infrastructure;
 
-import com.pickdate.bootstrap.domain.Identifier;
-import com.pickdate.bootstrap.exception.Problem;
-import com.pickdate.bootstrap.exception.ProblemCapturedEvent;
-import com.pickdate.bootstrap.exception.ProblemDetailsForAdminView;
-import com.pickdate.bootstrap.exception.ProblemDetailsWithParameters;
 import com.pickdate.ops.problem.domain.ProblemLog;
+import com.pickdate.shared.domain.Identifier;
+import com.pickdate.shared.exception.Problem;
+import com.pickdate.shared.exception.ProblemCapturedEvent;
+import com.pickdate.shared.exception.ProblemDetailsForAdminView;
+import com.pickdate.shared.exception.ProblemDetailsWithParameters;
 
 
 final class ProblemLogEventMapper {

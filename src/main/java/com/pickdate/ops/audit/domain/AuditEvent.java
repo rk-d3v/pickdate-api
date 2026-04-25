@@ -1,6 +1,6 @@
 package com.pickdate.ops.audit.domain;
 
-import com.pickdate.bootstrap.functional.Maybe;
+import com.pickdate.shared.functional.Maybe;
 
 
 public interface AuditEvent {

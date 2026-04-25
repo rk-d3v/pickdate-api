@@ -1,6 +1,6 @@
 package com.pickdate.test.fixture
 
-import com.pickdate.bootstrap.web.RequestDetails
+import com.pickdate.shared.web.RequestDetails
 import org.springframework.security.authentication.BadCredentialsException
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.authentication.event.AbstractAuthenticationFailureEvent

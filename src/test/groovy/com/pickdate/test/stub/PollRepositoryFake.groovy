@@ -1,11 +1,10 @@
 package com.pickdate.test.stub
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.poll.domain.Poll
 import com.pickdate.poll.domain.PollRepository
+import com.pickdate.shared.domain.Identifier
 
 import java.util.concurrent.ConcurrentHashMap
-
 
 class PollRepositoryFake implements PollRepository {
 

@@ -1,9 +1,9 @@
 package com.pickdate.iam.application;
 
-import com.pickdate.bootstrap.domain.Email;
-import com.pickdate.bootstrap.domain.Property;
-import com.pickdate.bootstrap.exception.ResourceAlreadyExistException;
 import com.pickdate.iam.domain.*;
+import com.pickdate.shared.domain.Email;
+import com.pickdate.shared.domain.Property;
+import com.pickdate.shared.exception.ResourceAlreadyExistException;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NonNull;
 import org.springframework.stereotype.Service;

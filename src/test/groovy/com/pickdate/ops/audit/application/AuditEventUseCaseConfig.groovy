@@ -1,11 +1,10 @@
 package com.pickdate.ops.audit.application
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.ops.audit.domain.Action
 import com.pickdate.ops.audit.domain.AuditEventRepository
 import com.pickdate.ops.audit.domain.AuditLogEventEntity
+import com.pickdate.shared.domain.Identifier
 import com.pickdate.test.stub.AuditEventRepositoryFake
-
 
 class AuditEventUseCaseConfig {
 

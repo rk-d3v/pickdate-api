@@ -1,9 +1,9 @@
 package com.pickdate.poll.application
 
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.poll.domain.Availability
 import com.pickdate.poll.domain.Vote
 import com.pickdate.poll.domain.VoteRepository
+import com.pickdate.shared.domain.Identifier
 import com.pickdate.test.stub.VoteRepositoryFake
 
 import static com.pickdate.poll.domain.Vote.VoteId

@@ -1,9 +1,9 @@
 package com.pickdate.poll.infrastructure;
 
-import com.pickdate.bootstrap.domain.DisplayName;
-import com.pickdate.bootstrap.domain.Email;
 import com.pickdate.poll.domain.Participant;
 import com.pickdate.poll.domain.Phone;
+import com.pickdate.shared.domain.DisplayName;
+import com.pickdate.shared.domain.Email;
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
 package com.pickdate.bootstrap.infrastructure.converter;
 
-import com.pickdate.bootstrap.domain.Identifier;
+import com.pickdate.shared.domain.Identifier;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

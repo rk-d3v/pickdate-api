@@ -1,8 +1,8 @@
 package com.pickdate.ops.problem.application;
 
-import com.pickdate.bootstrap.domain.Identifier;
 import com.pickdate.ops.problem.domain.ProblemLog;
 import com.pickdate.ops.problem.domain.ProblemLogRepository;
+import com.pickdate.shared.domain.Identifier;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;

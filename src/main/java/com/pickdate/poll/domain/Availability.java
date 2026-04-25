@@ -1,10 +1,10 @@
 package com.pickdate.poll.domain;
 
-import com.pickdate.bootstrap.validation.Assert;
+import com.pickdate.shared.validation.Assert;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 
-import static com.pickdate.bootstrap.validation.Matchers.oneOf;
+import static com.pickdate.shared.validation.Matchers.oneOf;
 import static java.util.Objects.isNull;
 
 public enum Availability {

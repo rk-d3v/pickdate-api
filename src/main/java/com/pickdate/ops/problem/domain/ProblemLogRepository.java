@@ -1,7 +1,7 @@
 package com.pickdate.ops.problem.domain;
 
-import com.pickdate.bootstrap.domain.Identifier;
 import com.pickdate.ops.problem.application.ProblemLogFilter;
+import com.pickdate.shared.domain.Identifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

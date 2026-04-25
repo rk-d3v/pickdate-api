@@ -1,7 +1,7 @@
 package com.pickdate.iam.infrastructure
 
-import com.pickdate.bootstrap.exception.InternalServerError
 import com.pickdate.iam.application.ApplicationSetupUseCase
+import com.pickdate.shared.exception.InternalServerError
 import com.pickdate.test.mapper.JsonMapper
 import com.pickdate.test.type.MvcSpec
 import org.spockframework.spring.SpringBean
@@ -12,7 +12,6 @@ import spock.lang.Requires
 import static org.springframework.http.MediaType.APPLICATION_JSON
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print
-
 
 @Requires({ it.env['INCLUDE_SLOW_TESTS'] == 'true' })
 class SetupApiMvcSpec extends MvcSpec implements JsonMapper {

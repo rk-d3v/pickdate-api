@@ -1,9 +1,9 @@
 package com.pickdate.poll.infrastructure;
 
-import com.pickdate.bootstrap.domain.Identifier;
 import com.pickdate.poll.domain.Vote;
 import com.pickdate.poll.domain.Vote.VoteId;
 import com.pickdate.poll.domain.VoteRepository;
+import com.pickdate.shared.domain.Identifier;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

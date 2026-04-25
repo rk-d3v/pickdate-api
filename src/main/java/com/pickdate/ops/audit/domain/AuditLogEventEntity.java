@@ -1,6 +1,6 @@
 package com.pickdate.ops.audit.domain;
 
-import com.pickdate.bootstrap.domain.Identifier;
+import com.pickdate.shared.domain.Identifier;
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

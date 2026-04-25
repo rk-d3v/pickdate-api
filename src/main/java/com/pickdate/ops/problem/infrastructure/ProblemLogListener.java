@@ -1,7 +1,7 @@
 package com.pickdate.ops.problem.infrastructure;
 
-import com.pickdate.bootstrap.exception.ProblemCapturedEvent;
 import com.pickdate.ops.problem.application.ProblemLogUseCase;
+import com.pickdate.shared.exception.ProblemCapturedEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.modulith.events.ApplicationModuleListener;

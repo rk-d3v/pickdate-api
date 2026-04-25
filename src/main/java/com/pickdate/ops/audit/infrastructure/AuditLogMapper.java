@@ -2,7 +2,7 @@ package com.pickdate.ops.audit.infrastructure;
 
 import com.pickdate.ops.audit.domain.AuditLogEventEntity;
 
-import static com.pickdate.bootstrap.domain.Value.valueOrNull;
+import static com.pickdate.shared.domain.Value.valueOrNull;
 
 
 final class AuditLogMapper {

@@ -1,7 +1,7 @@
 package com.pickdate.iam.domain;
 
-import com.pickdate.bootstrap.domain.Email;
-import com.pickdate.bootstrap.domain.Identifier;
+import com.pickdate.shared.domain.Email;
+import com.pickdate.shared.domain.Identifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

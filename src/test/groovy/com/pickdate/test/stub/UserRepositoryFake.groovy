@@ -1,9 +1,9 @@
 package com.pickdate.test.stub
 
-import com.pickdate.bootstrap.domain.Email
-import com.pickdate.bootstrap.domain.Identifier
 import com.pickdate.iam.domain.User
 import com.pickdate.iam.domain.UserRepository
+import com.pickdate.shared.domain.Email
+import com.pickdate.shared.domain.Identifier
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageImpl
 import org.springframework.data.domain.Pageable

@@ -1,8 +1,8 @@
 package com.pickdate.poll.infrastructure;
 
-import com.pickdate.bootstrap.domain.Identifier;
 import com.pickdate.poll.application.VoteData;
 import com.pickdate.poll.application.VoteUseCase;
+import com.pickdate.shared.domain.Identifier;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;

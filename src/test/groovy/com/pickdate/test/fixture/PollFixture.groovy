@@ -1,13 +1,12 @@
 package com.pickdate.test.fixture
 
-import com.pickdate.bootstrap.domain.DisplayName
 import com.pickdate.poll.application.OptionData
 import com.pickdate.poll.application.ParticipantData
 import com.pickdate.poll.application.PollData
 import com.pickdate.poll.domain.TimeRange
+import com.pickdate.shared.domain.DisplayName
 
 import java.time.Instant
-
 
 class PollFixture {
 

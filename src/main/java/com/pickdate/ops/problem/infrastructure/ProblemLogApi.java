@@ -1,8 +1,8 @@
 package com.pickdate.ops.problem.infrastructure;
 
-import com.pickdate.bootstrap.exception.Problem;
 import com.pickdate.ops.problem.application.ProblemLogFilter;
 import com.pickdate.ops.problem.application.ProblemLogUseCase;
+import com.pickdate.shared.exception.Problem;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

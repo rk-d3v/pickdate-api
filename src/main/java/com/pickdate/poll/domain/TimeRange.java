@@ -1,6 +1,6 @@
 package com.pickdate.poll.domain;
 
-import com.pickdate.bootstrap.validation.Assert;
+import com.pickdate.shared.validation.Assert;
 
 import java.time.Instant;
 

@@ -1,13 +1,13 @@
 package com.pickdate.iam.application;
 
-import com.pickdate.bootstrap.domain.Email;
-import com.pickdate.bootstrap.domain.Identifier;
-import com.pickdate.bootstrap.domain.Property;
-import com.pickdate.bootstrap.exception.ResourceAlreadyExistException;
 import com.pickdate.iam.domain.Authority;
 import com.pickdate.iam.domain.User;
 import com.pickdate.iam.domain.UserNotFoundException;
 import com.pickdate.iam.domain.UserRepository;
+import com.pickdate.shared.domain.Email;
+import com.pickdate.shared.domain.Identifier;
+import com.pickdate.shared.domain.Property;
+import com.pickdate.shared.exception.ResourceAlreadyExistException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

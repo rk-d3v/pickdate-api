@@ -1,7 +1,7 @@
 package com.pickdate.ops.audit.domain;
 
-import com.pickdate.bootstrap.domain.Value;
-import com.pickdate.bootstrap.validation.Assert;
+import com.pickdate.shared.domain.Value;
+import com.pickdate.shared.validation.Assert;
 import jakarta.annotation.Nonnull;
 import lombok.Getter;
 

@@ -1,6 +1,6 @@
 package com.pickdate.poll.domain
 
-import com.pickdate.bootstrap.exception.IllegalValueException
+import com.pickdate.shared.exception.IllegalValueException
 import spock.lang.Specification
 
 class AvailabilitySpec extends Specification {

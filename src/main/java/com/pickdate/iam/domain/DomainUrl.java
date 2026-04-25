@@ -1,7 +1,7 @@
 package com.pickdate.iam.domain;
 
-import com.pickdate.bootstrap.domain.Value;
-import com.pickdate.bootstrap.validation.Assert;
+import com.pickdate.shared.domain.Value;
+import com.pickdate.shared.validation.Assert;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.Getter;
@@ -9,8 +9,8 @@ import lombok.Getter;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-import static com.pickdate.bootstrap.validation.Matchers.isValidPort;
-import static com.pickdate.bootstrap.validation.Matchers.oneRegexOf;
+import static com.pickdate.shared.validation.Matchers.isValidPort;
+import static com.pickdate.shared.validation.Matchers.oneRegexOf;
 import static java.util.regex.Pattern.compile;
 
 

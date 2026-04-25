@@ -1,6 +1,6 @@
 package com.pickdate.bootstrap.infrastructure.config;
 
-import com.pickdate.bootstrap.exception.*;
+import com.pickdate.shared.exception.*;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.net.URI;
 
-import static com.pickdate.bootstrap.exception.ProblemFactory.*;
+import static com.pickdate.shared.exception.ProblemFactory.*;
 
 
 @Slf4j

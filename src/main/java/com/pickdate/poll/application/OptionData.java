@@ -4,7 +4,7 @@ import com.pickdate.poll.domain.Option;
 
 import java.time.Instant;
 
-import static com.pickdate.bootstrap.domain.Value.valueOrNull;
+import static com.pickdate.shared.domain.Value.valueOrNull;
 
 
 public record OptionData(

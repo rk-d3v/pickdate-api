@@ -1,9 +1,9 @@
 package com.pickdate.ops.problem.infrastructure;
 
-import com.pickdate.bootstrap.domain.Identifier;
 import com.pickdate.ops.problem.application.ProblemLogFilter;
 import com.pickdate.ops.problem.domain.ProblemLog;
 import com.pickdate.ops.problem.domain.ProblemLogRepository;
+import com.pickdate.shared.domain.Identifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;

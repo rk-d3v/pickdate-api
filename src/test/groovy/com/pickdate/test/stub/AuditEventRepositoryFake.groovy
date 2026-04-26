@@ -1,9 +1,9 @@
 package com.pickdate.test.stub
 
-import com.pickdate.ops.audit.application.AuditLogFilter
-import com.pickdate.ops.audit.domain.Action
-import com.pickdate.ops.audit.domain.AuditEventRepository
-import com.pickdate.ops.audit.domain.AuditLogEventEntity
+import com.pickdate.observability.audit.application.AuditLogFilter
+import com.pickdate.observability.audit.domain.Action
+import com.pickdate.observability.audit.domain.AuditEventRepository
+import com.pickdate.observability.audit.domain.AuditLogEventEntity
 import com.pickdate.shared.domain.Identifier
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageImpl

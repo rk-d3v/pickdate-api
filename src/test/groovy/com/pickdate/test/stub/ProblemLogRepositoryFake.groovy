@@ -1,8 +1,8 @@
 package com.pickdate.test.stub
 
-import com.pickdate.ops.problem.application.ProblemLogFilter
-import com.pickdate.ops.problem.domain.ProblemLog
-import com.pickdate.ops.problem.domain.ProblemLogRepository
+import com.pickdate.observability.problem.application.ProblemLogFilter
+import com.pickdate.observability.problem.domain.ProblemLog
+import com.pickdate.observability.problem.domain.ProblemLogRepository
 import com.pickdate.shared.domain.Identifier
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageImpl

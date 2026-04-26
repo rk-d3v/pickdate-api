@@ -76,7 +76,7 @@ class SecurityConfiguration {
 
     @Bean
     @Order(1)
-    public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) {
+    SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) {
         http
                 .oauth2AuthorizationServer((authorizationServer) -> {
                     http.securityMatcher(authorizationServer.getEndpointsMatcher());
@@ -100,7 +100,7 @@ class SecurityConfiguration {
 
     @Bean
     @Order(2)
-    public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) {
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) {
         http
                 .csrf(csrf -> csrf.ignoringRequestMatchers(SETUP_ENDPOINTS))
                 .authorizeHttpRequests((authorize) -> authorize
@@ -129,15 +129,16 @@ class SecurityConfiguration {
                         })
                         .requestMatchers(
                                 "/api/v1/iam/**",
-                                "/api/v1/ops/**"
+                                "/api/v1/observability/**"
                         ).hasAuthority("ADMIN")
+                        .requestMatchers("/api/v1").permitAll()
                         .requestMatchers("/api/v1/**").hasAuthority("USER")
                         .anyRequest().authenticated()
                 )
                 // return 401
                 .exceptionHandling(ex -> ex
-                                .authenticationEntryPoint((request, response, authException) ->
-                                        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED))
+                        .authenticationEntryPoint((request, response, authException) ->
+                                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED))
                 )
                 .formLogin(form -> form
                         .loginPage("/login").permitAll()
@@ -199,7 +200,7 @@ class SecurityConfiguration {
     }
 
     @Bean
-    public RegisteredClientRepository registeredClientRepository() {
+    RegisteredClientRepository registeredClientRepository() {
         RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
                 .clientId("oidc-client")
                 .clientSecret("{noop}secret")

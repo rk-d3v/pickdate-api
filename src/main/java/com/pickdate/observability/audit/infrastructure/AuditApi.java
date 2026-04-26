@@ -24,7 +24,7 @@ import static org.springframework.format.annotation.DateTimeFormat.ISO.DATE_TIME
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/ops/audit")
+@RequestMapping("/api/v1/observability/audit")
 @AllArgsConstructor
 @Tag(name = "Audit", description = "Audit events")
 @SecurityRequirement(name = "basicAuth")
